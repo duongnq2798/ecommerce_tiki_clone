@@ -46,7 +46,7 @@
 
 ### Clone Repo:
 
-`git clone https://gitlab.com/rnzone99/bhtd/mshop.git`
+`git clone https://github.com/duongnq2798/ecommerce_tiki_clone.git`
 
 ### Install Dependencies:
 
