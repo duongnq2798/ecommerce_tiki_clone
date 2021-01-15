@@ -58,7 +58,7 @@
 
 ---
 
-### Build Eealease App
+### Build Realease App
 
 ` cd android`
 ./gradlew assembleRelease
