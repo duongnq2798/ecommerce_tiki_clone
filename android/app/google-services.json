@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "689350675021",
+    "project_id": "tikitechup",
+    "storage_bucket": "tikitechup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689350675021:android:3caa7c780984020d962a04",
+        "android_client_info": {
+          "package_name": "com.clone_tiki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689350675021-9m3g40qhg6hr4he7jj3bg298pcanff32.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clone_tiki",
+            "certificate_hash": "b927abae94e3094c76f4781a001946ac408720d7"
+          }
+        },
+        {
+          "client_id": "689350675021-fddrcgue97h9cr4f4tkc81rp7ad7qodh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqqY6EdLYLYZOYGpf6Rqy7dMsFNfwL9GU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689350675021-fddrcgue97h9cr4f4tkc81rp7ad7qodh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
