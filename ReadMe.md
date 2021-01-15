@@ -89,6 +89,3 @@ const encodedData = 'R0lGODlhAQABAIAAAAAA...7';
 [react-native-app-intro-slider](https://github.com/Jacse/react-native-app-intro-slider)
 
 # Notes
-
-- ScrollableTabView: thư viện bị lỗi getNode đi vào nodemodule->react-native-scrollable-tab-view->index.js-> Xoá getNode()
-- Cài thêm @react-native-community/viewpager -> sau đó link
