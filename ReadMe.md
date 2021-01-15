@@ -2,19 +2,34 @@
 
 ## Image App
 
-![Home Boot](./img/Screenshot_1610691563.png) | ![Home ](./img/Screenshot_1610691573.png)
-![Home ](./img/Screenshot_1610691582.png) | ![Home ](./img/Screenshot_1610691658.png)
-![Home ](./img/Screenshot_1610691685.png) | ![Home ](./img/Screenshot_1610691698.png)
-![Home Boot](./img/Screenshot_1610691718.png) | ![Home ](./img/Screenshot_1610691725.png)
-![Home Boot](./img/Screenshot_1610691738.png) | ![Home ](./img/Screenshot_1610691744.png)
-![Home Boot](./img/Screenshot_1610691752.png) | ![Home ](./img/Screenshot_1610691764.png)
-![Home Boot](./img/Screenshot_1610691772.png) | ![Home ](./img/Screenshot_1610691813.png)
-![Home Boot](./img/Screenshot_1610691828.png) | ![Home ](./img/Screenshot_1610691845.png)
-![Home Boot](./img/Screenshot_1610691858.png) | ![Home ](./img/Screenshot_1610691873.png)
-![Home Boot](./img/Screenshot_1610691882.png) | ![Home ](./img/Screenshot_1610691888.png)
-![Home Boot](./img/Screenshot_1610691898.png) | ![Home ](./img/Screenshot_1610691951.png)
-![Home Boot](./img/Screenshot_1610691962.png)| ![Home ](./img/Screenshot_1610691991.png)
-![Home Boot](./img/Screenshot_1610692010.png) | ![Home ](./img/Screenshot_1610692110.png)
+<div style="display:flex, margin: 20px, flex: wrap">
+     <img src="./img/Screenshot_1610691563.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691573.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691582.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691658.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691685.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691698.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691718.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691725.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691738.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691744.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691752.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691764.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691772.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691813.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691828.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691845.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691858.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691873.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691882.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691888.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691898.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691951.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691991.png" width="270" height="500">
+     <img src="./img/Screenshot_1610691962.png" width="270" height="500">
+     <img src="./img/Screenshot_1610692010.png" width="270" height="500">
+     <img src="./img/Screenshot_1610692110.png" width="270" height="500">
+</div>
 
 ## Structure Project
 
