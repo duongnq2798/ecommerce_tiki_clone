@@ -1,13 +1,19 @@
 # Clone Tiki Application
 
+## Image App
+
+![Home Boot]('./img/Screenshot_1610691563.png')
+
 ## Structure Project
 
 - assets
 - components
 - constants
 - data
+- i18n
 - screens
-- Stacks
+- navigation
+- Redux
 
 ## Run App
 
@@ -46,6 +52,7 @@ const encodedData = 'R0lGODlhAQABAIAAAAAA...7';
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Firebase](https://rnfirebase.io/)
 - [Redux](https://redux.js.org/)
+- [React Native Firebase](https://redux.js.org/)
 - [Redux Persist](https://redux.js.org/)
 
 ---
