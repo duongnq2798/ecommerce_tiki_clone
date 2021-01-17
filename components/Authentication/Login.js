@@ -15,6 +15,8 @@ import firestore from '@react-native-firebase/firestore';
 import {useNavigation} from '@react-navigation/native';
 import {GoogleSignin} from '@react-native-community/google-signin';
 import {LoginManager, AccessToken} from 'react-native-fbsdk';
+import AppTextInput from '../AppTextInput';
+import AppText from '../AppText';
 
 GoogleSignin.configure({
   webClientId:
@@ -72,7 +74,6 @@ const Login = () => {
           });
         });
         setUsers(users);
-        // console.log()
       });
     return () => subcriber();
   }, []);
@@ -103,18 +104,18 @@ const Login = () => {
   const [password, setPassword] = useState('');
   return (
     <ScrollView style={styles.container}>
-      <TextInput
+      <AppTextInput
         style={[styles.email, {borderBottomColor: color}]}
-        placeholder="Email / Số điện thoại"
+        i18nKey={'emailOrPhone'}
         placeholderTextColor={color}
         onFocus={() => setColor(colors.blue)}
         onBlur={() => setColor('#333')}
         value={email}
         onChangeText={(email) => setEmail(email)}
       />
-      <TextInput
+      <AppTextInput
         style={[styles.email, {borderBottomColor: color2}]}
-        placeholder="Mật khẩu"
+        i18nKey={'password'}
         placeholderTextColor={color2}
         onFocus={() => setColor2(colors.blue)}
         onBlur={() => setColor2('#333')}
@@ -126,10 +127,14 @@ const Login = () => {
         activeOpacity={0.9}
         style={styles.LoginButton}
         onPress={loginApp}>
-        <Text style={{color: 'white', fontSize: 17}}>Đăng Nhập</Text>
+        <Text style={{color: 'white', fontSize: 17}}>
+          <AppText i18nKey={'login'} />
+        </Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.quenMatKhau}>
-        <Text style={{color: colors.blue}}>Quên mật khẩu?</Text>
+        <Text style={{color: colors.blue}}>
+          <AppText i18nKey={'forgotPassword'} />
+        </Text>
       </TouchableOpacity>
       <View
         style={{

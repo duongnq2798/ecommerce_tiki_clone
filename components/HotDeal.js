@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HotDealItem from './HotDealItem';
 import styles from './Styles/HotDealStyle';
 import colors from '../constants/Colors';
+import AppText from '../components/AppText';
 const HotDeal = ({data}) => {
   const [dataList, setDataList] = useState(data);
 
@@ -17,9 +18,9 @@ const HotDeal = ({data}) => {
       <View style={styles.hotdealContainer}>
         <View style={styles.headCounter}>
           <Text style={styles.titleList}>
-            Giá Sốc
+            <AppText i18nKey={'priceShock'} />
             <Ionicons name="ios-flash-outline" size={20} color="#e96c28" />
-            Hôm Nay
+            <AppText i18nKey={'today'} />
           </Text>
           <TouchableOpacity style={styles.subCounter}>
             <Text style={styles.textCounter}>00</Text>

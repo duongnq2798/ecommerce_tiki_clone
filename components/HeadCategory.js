@@ -10,6 +10,8 @@ import styles from './Styles/HeadCategoryStyle';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 import {connect} from 'react-redux';
+import AppTextInput from './AppTextInput';
+
 const HeadCategory = (props) => {
   const navigation = useNavigation();
   return (
@@ -17,11 +19,10 @@ const HeadCategory = (props) => {
       <View style={styles.headerContainer}>
         <View style={styles.groupInput}>
           <Ionicons name="ios-search" size={30} color="#3333" />
-          <TextInput
+          <AppTextInput
             style={styles.textSearch}
             placeholderTextColor="#000"
-            placeholder="Danh mục sản phẩm"
-            // inlineImageLeft={()=><Ionicons name="ios-person" size={30} color="#4F8EF7" />}
+            i18nKey={'categoryProduct'}
           />
         </View>
         <View>

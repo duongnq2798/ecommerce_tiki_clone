@@ -1,15 +1,16 @@
 import React from 'react';
-import {View, Image, StyleSheet, Dimensions, Text} from 'react-native';
+import {View, Image, Text} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import img from '../constants/Images';
 import styles from './Styles/ToDayHaveHotStyles';
+import AppText from './AppText';
 
 const ToDayHaveHot = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
         <Ionicons name="ios-flame" size={20} color="#e85b2a" />
-        Hôm Nay Có Gì Hot
+        <AppText i18nKey={'toDayHaveHot'} />
       </Text>
       <View style={styles.containerView}>
         <View style={styles.left}>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 import {
   View,
@@ -8,6 +8,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
+import AppText from '../AppText';
 
 import {useNavigation} from '@react-navigation/native';
 // import firestore from '@react-native-firebase/firestore';
@@ -39,7 +40,9 @@ const CategoryDangHot = ({dataCategory}) => {
   );
   return (
     <View style={{flex: 1, marginBottom: 150}}>
-      <Text style={styles.titleRight}>Danh mục đang hot:</Text>
+      <Text style={styles.titleRight}>
+        <AppText i18nKey={'categoryHot'} />:
+      </Text>
       <View style={styles.bound}>
         <FlatList
           data={dataCategory}

@@ -1,17 +1,11 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Dimensions,
-  TouchableOpacity,
-  Image,
-} from 'react-native';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../constants/Colors';
 import img from '../constants/Images';
 import styles from './Styles/SearchHotStyle';
+import AppText from './AppText';
 
 const SearchHot = () => {
   return (
@@ -24,7 +18,9 @@ const SearchHot = () => {
             size={25}
             color="black"
           />
-          <Text style={styles.title}>Tìm Kiếm Nổi Bật</Text>
+          <Text style={styles.title}>
+            <AppText i18nKey={'outstandingSearch'} />
+          </Text>
         </View>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Ionicons
@@ -34,7 +30,9 @@ const SearchHot = () => {
             color={colors.blue}
           />
           <TouchableOpacity>
-            <Text style={[styles.title, {color: colors.blue}]}>XEM THÊM</Text>
+            <Text style={[styles.title, {color: colors.blue}]}>
+              <AppText i18nKey={'viewMore'} />
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

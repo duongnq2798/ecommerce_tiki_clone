@@ -1,14 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Image,
   Dimensions,
   TouchableOpacity,
-  StyleSheet,
   ScrollView,
 } from 'react-native';
 
-// import CustomTabBars from '../components/Tab/CustomTabBar';
 import Login from '../components/Authentication/Login';
 import SignUp from '../components/Authentication/SignUp';
 import images from '../constants/Images';
@@ -16,10 +14,27 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import styles from './Styles/LoginScreenStyle';
+import {connect} from 'react-redux';
 const {width, height} = Dimensions.get('window');
 
-const LoginScreen = () => {
+const LoginScreen = ({language}) => {
   const navigation = useNavigation();
+  const [enLg, setEnLg] = useState('Đăng Nhập');
+  const [enSi, setEnSi] = useState('Đăng Ký');
+  let englishLogin = 'Login',
+    englishSignup = 'Sign Up',
+    vietnameLogin = 'Đăng Nhập',
+    vietSignup = 'Đăng ký';
+
+  useEffect(() => {
+    if (language === 'en') {
+      setEnLg(englishLogin);
+      setEnSi(englishSignup);
+    } else if (language === 'vn') {
+      setEnLg(vietnameLogin);
+      setEnSi(vietSignup);
+    }
+  }, []);
   return (
     <ScrollView
       style={styles.container}
@@ -45,11 +60,17 @@ const LoginScreen = () => {
         tabBarUnderlineStyle={{backgroundColor: '#fdb827', height: 3}}
         tabBarActiveTextColor="black"
         initialPage={0}>
-        <Login tabLabel="Đăng Nhập" />
-        <SignUp tabLabel="Đăng Ký" />
+        <Login tabLabel={enLg} />
+        <SignUp tabLabel={enSi} />
       </ScrollableTabView>
     </ScrollView>
   );
 };
 
-export default LoginScreen;
+const mapStateToProps = (state) => {
+  return {
+    language: state.Language.language,
+  };
+};
+
+export default connect(mapStateToProps, null)(LoginScreen);

@@ -1,17 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  ScrollView,
-  Image,
-  TouchableOpacity,
-  FlatList,
-} from 'react-native';
+import {View, Text, ScrollView, Image, TouchableOpacity} from 'react-native';
 // Firestore from firebase
 import firestore from '@react-native-firebase/firestore';
 import colors from '../constants/Colors';
 import Lightbox from 'react-native-lightbox';
 import styles from './Styles/SurfingScreenStyle';
+import AppText from '../components/AppText';
 
 const Surfing = (props) => {
   const [postList, setPostList] = useState([]);
@@ -42,27 +36,37 @@ const Surfing = (props) => {
     <ScrollView>
       <View style={styles.headerbar}>
         <Text style={{color: colors.white, fontSize: 15, fontWeight: 'bold'}}>
-          Lướt
+          <AppText i18nKey={'surfing'} />
         </Text>
       </View>
       <View style={styles.tabView}>
         <View>
           <TouchableOpacity activeOpacity={0.8}>
-            <Text style={styles.titleTab}>Khám phá</Text>
-            <Text style={styles.titleTabBot}>Thông tin mới</Text>
+            <Text style={styles.titleTab}>
+              <AppText i18nKey={'explore'} />
+            </Text>
+            <Text style={styles.titleTabBot}>
+              <AppText i18nKey={'newInformation'} />
+            </Text>
           </TouchableOpacity>
         </View>
 
         <View>
           <TouchableOpacity activeOpacity={0.8}>
-            <Text style={styles.titleTab}>Quan tâm</Text>
-            <Text style={styles.titleTabBot}>Theo dõi</Text>
+            <Text style={styles.titleTab}>
+              <AppText i18nKey={'care'} />
+            </Text>
+            <Text style={styles.titleTabBot}>
+              <AppText i18nKey={'follow'} />
+            </Text>
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity activeOpacity={0.8}>
             <Text style={styles.titleTab}>TikiLIVE</Text>
-            <Text style={styles.titleTabBot}>Trực tiếp mọi lúc</Text>
+            <Text style={styles.titleTabBot}>
+              <AppText i18nKey={'liveEverytime'} />
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -89,7 +93,10 @@ const Surfing = (props) => {
                     </View>
                     <View>
                       <Text>{item.title}</Text>
-                      <Text>Cửa hàng - 33 phút trước</Text>
+                      <Text>
+                        <AppText i18nKey={'store'} /> - 12{' '}
+                        <AppText i18nKey={'minuteAgo'} />
+                      </Text>
                     </View>
                   </View>
                   <View>
@@ -100,11 +107,15 @@ const Surfing = (props) => {
                       activeOpacity={0.8}>
                       {item.isSelected ? (
                         <>
-                          <Text style={styles.follow}>Theo dõi</Text>
+                          <Text style={styles.follow}>
+                            <AppText i18nKey={'follow'} />
+                          </Text>
                         </>
                       ) : (
                         <>
-                          <Text style={styles.followed}>Đẵ theo dõi</Text>
+                          <Text style={styles.followed}>
+                            <AppText i18nKey={'followed'} />
+                          </Text>
                         </>
                       )}
                       {/* <Text style={styles.follow}>Theo dõi</Text> */}

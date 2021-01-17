@@ -1,10 +1,10 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {TextInput, Text} from 'react-native';
 
 import {connect} from 'react-redux';
 import I18n from '../i18n/i18n';
 
-class AppText extends React.Component {
+class AppTextInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,9 +32,11 @@ class AppText extends React.Component {
     const {i18nKey, style} = this.props;
     const {i18n} = this.state;
     return (
-      <Text style={style}>
-        {i18nKey ? i18n.t(i18nKey) : this.props.children}
-      </Text>
+      <TextInput
+        placeholder={i18nKey ? i18n.t(i18nKey) : null}
+        style={style}
+        {...this.props}
+      />
     );
   }
 }
@@ -45,4 +47,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(AppText);
+export default connect(mapStateToProps, null)(AppTextInput);

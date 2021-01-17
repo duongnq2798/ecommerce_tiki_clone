@@ -26,9 +26,9 @@ const Cart = (props) => {
       props.items.Carts[item].quantity * props.items.Carts[item].price;
     ListCart.push(props.items.Carts[item]);
   });
-  function TotalPrice(price, tonggia) {
-    return Number(price * tonggia).toLocaleString('en-US');
-  }
+  // function TotalPrice(price, tonggia) {
+  //   return Number(price * tonggia).toLocaleString('en-US');
+  // }
 
   // Create handleIncrement event handler
   return (

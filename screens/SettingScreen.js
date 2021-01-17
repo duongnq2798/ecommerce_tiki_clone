@@ -3,31 +3,41 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {connect} from 'react-redux';
 import {changeLanguage} from '../Redux/actions';
 import HeadPersonal from '../components/HeadPersonal';
+import styles from './Styles/SettingScreenStyle';
 
 const SettingScreen = (props) => {
   const isVNLang = props.language === 'vi' ? true : false;
 
   const setLanguageHook = (lang) => {
     props.setLanguage(lang);
-    // console.log(lang);H
   };
   return (
     <View>
-      <HeadPersonal title="Cài đặt" />
-      <TouchableOpacity
-        onPress={() => setLanguageHook('vi')}
-        style={{marginLeft: 20}}>
-        <Text style={{color: isVNLang ? 'blue' : 'grey', fontSize: 50}}>
-          Việt Nam
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => setLanguageHook('en')}
-        style={{marginLeft: 5}}>
-        <Text style={{color: !isVNLang ? 'blue' : 'grey', fontSize: 50}}>
-          English
-        </Text>
-      </TouchableOpacity>
+      <HeadPersonal title="setting" />
+      <View style={styles.chanegGroup}>
+        <TouchableOpacity
+          onPress={() => setLanguageHook('vi')}
+          style={styles.buttonChange}>
+          <Text
+            style={[
+              {color: isVNLang ? 'white' : 'grey', fontSize: 20},
+              styles.buttonText,
+            ]}>
+            Việt Nam
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => setLanguageHook('en')}
+          style={styles.buttonChange}>
+          <Text
+            style={[
+              {color: !isVNLang ? 'white' : 'grey', fontSize: 20},
+              styles.buttonText,
+            ]}>
+            English
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

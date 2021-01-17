@@ -14,28 +14,11 @@ import {ListItemBot} from '../../data/ListItemManage';
 import {support} from '../../data/ListItemManage';
 import colors from '../../constants/Colors';
 import {useNavigation} from '@react-navigation/native';
-import ManageOrder from '../../screens/ManageOrder';
-
-const ListItem = ({icon, title, arrow}) => (
-  <View style={styles.item}>
-    <View style={styles.boxContainer}>
-      <View style={styles.boxChild}>
-        <View style={styles.icon}>
-          <Ionicons name={icon} size={25} color={colors.black} />
-        </View>
-        <View>
-          <Text style={styles.title}>{title}</Text>
-        </View>
-      </View>
-      <View>
-        <MaterialIcons name={arrow} size={25} color={colors.comment} />
-      </View>
-    </View>
-  </View>
-);
+import AppText from '../AppText';
 
 const ListManageProduct = () => {
   const navigation = useNavigation();
+  let text = '';
   const renderItem = ({item}) => (
     <TouchableOpacity
       onPress={() => {
@@ -50,7 +33,54 @@ const ListManageProduct = () => {
         }
       }}
       style={{backgroundColor: colors.white, marginBottom: 1.5}}>
-      <ListItem title={item.title} icon={item.icon} arrow={item.arrow} />
+      <View style={styles.item}>
+        <View style={styles.boxContainer}>
+          <View style={styles.boxChild}>
+            <View style={styles.icon}>
+              <Ionicons name={item.icon} size={25} color={colors.black} />
+            </View>
+            <View>
+              {(() => {
+                switch (item.id) {
+                  case 1:
+                    text = 'manageOrder';
+                    break;
+                  case 2:
+                    text = 'purchasedProduct';
+                    break;
+                  case 3:
+                    text = 'viewedProduct';
+                    break;
+                  case 4:
+                    text = 'favorireProduct';
+                    break;
+                  case 5:
+                    text = 'ratedProducts';
+                    break;
+                  case 6:
+                    text = 'productPurchasedLater';
+                    break;
+                  case 7:
+                    text = 'offersForBankCardHolders';
+                    break;
+                  case 8:
+                    text = 'setting';
+                    break;
+                  case 9:
+                    text = 'support';
+                    break;
+                  default:
+                    text = '';
+                }
+              })()}
+              <AppText style={styles.title} i18nKey={text} />
+            </View>
+          </View>
+          <View>
+            <MaterialIcons name={item.arrow} size={25} color={colors.comment} />
+          </View>
+        </View>
+      </View>
     </TouchableOpacity>
   );
 

@@ -7,6 +7,7 @@ import ListManageProduct from '../components/Personal/ListManageProduct';
 import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import styles from './Styles/PersonalScreenStyles';
+import AppText from '../components/AppText';
 
 const PersonalScreen = () => {
   const navigation = useNavigation();
@@ -48,9 +49,11 @@ const PersonalScreen = () => {
                 />
               </View>
               <View>
-                <Text style={{color: '#333'}}>Chào mừng bạn đến với Tiki</Text>
+                <Text style={{color: '#333'}}>
+                  <AppText i18nKey={'welcomeToTiki'} />
+                </Text>
                 <Text style={{fontSize: 19, color: colors.blue}}>
-                  Đăng nhập/Đăng ký
+                  <AppText i18nKey={'login'} />/<AppText i18nKey={'signUp'} />
                 </Text>
               </View>
             </View>
@@ -75,21 +78,24 @@ const PersonalScreen = () => {
             </View>
             <View>
               <Text style={{color: '#333', width: '80%'}} numberOfLines={2}>
-                Chào mừng {user.email} đến với Tiki
+                <AppText i18nKey={'welcome'} /> {user.email}{' '}
+                <AppText i18nKey={'toTiki'} />
               </Text>
             </View>
           </View>
         </TouchableOpacity>
         <ListManageProduct />
         <TouchableOpacity style={styles.dangXuat} onPress={logoff}>
-          <Text style={{color: colors.blue, fontSize: 17}}>Đăng xuất</Text>
+          <Text style={{color: colors.blue, fontSize: 17}}>
+            <AppText i18nKey={'loggout'} />
+          </Text>
         </TouchableOpacity>
       </View>
     );
   }
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <HeadPersonal title="Cá Nhân" />
+      <HeadPersonal title="personal" />
       <LoginApp />
     </ScrollView>
   );

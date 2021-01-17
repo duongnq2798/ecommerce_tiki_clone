@@ -14,16 +14,15 @@ import {connect} from 'react-redux';
 import {changeLanguage} from '../Redux/actions';
 import metrics from '../constants/metrics';
 import colors from '../constants/Colors';
-
-import AppText from './AppText';
+import AppTextInput from './AppTextInput';
 
 const Header = ({iconSearch, placeHolder, numberCart, language}) => {
   const navigation = useNavigation();
-  const isVNLang = language === 'vi' ? true : false;
 
   useState(() => {
     console.log(language);
-  });
+  }, []);
+
   return (
     <SafeAreaView>
       <View style={styles.headerContainer}>
@@ -33,10 +32,10 @@ const Header = ({iconSearch, placeHolder, numberCart, language}) => {
             size={metrics.iconMedium}
             color={colors.grayA}
           />
-          <TextInput
+          <AppTextInput
             style={styles.textSearch}
             placeholderTextColor={colors.grayA}
-            placeholder={placeHolder}
+            i18nKey={'whatAreYouLokingForToday'}
             onFocus={() => navigation.navigate('SearchScreen')}
           />
         </TouchableOpacity>
@@ -60,7 +59,6 @@ const Header = ({iconSearch, placeHolder, numberCart, language}) => {
             />
             <Text style={styleCustom.badge}>{numberCart}</Text>
           </TouchableOpacity>
-          <AppText i18nKey={'category'}></AppText>
         </View>
       </View>
     </SafeAreaView>

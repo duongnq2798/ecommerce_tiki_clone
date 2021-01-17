@@ -14,8 +14,9 @@ import colors from '../../constants/Colors';
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import {useNavigation} from '@react-navigation/native';
-// import Home from '../../screens/Home';
-// Import Image Picker
+import AppTextInput from '../AppTextInput';
+import AppText from '../AppText';
+
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
 const Login = () => {
@@ -182,18 +183,19 @@ const Login = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <TextInput
+      <AppTextInput
         style={[styles.email, {borderBottomColor: color}]}
-        placeholder="Họ tên"
+        i18nKey={'fullName'}
         placeholderTextColor={color}
         onFocus={() => setColor(colors.blue)}
         onBlur={() => setColor('#333')}
         value={name}
         onChangeText={(name) => setName(name)}
       />
-      <TextInput
+
+      <AppTextInput
         style={[styles.email, {borderBottomColor: color2}]}
-        placeholder="Số điện thoại"
+        i18nKey={'phoneNumber'}
         placeholderTextColor={color2}
         value={phone}
         onChangeText={(phone) => setPhone(phone)}
@@ -201,9 +203,9 @@ const Login = () => {
         onBlur={() => setColor2('#333')}
         keyboardType="phone-pad"
       />
-      <TextInput
+      <AppTextInput
         style={[styles.email, {borderBottomColor: color3}]}
-        placeholder="Email"
+        i18nKey={'email'}
         placeholderTextColor={color3}
         onFocus={() => setColor3(colors.blue)}
         onBlur={() => setColor3('#333')}
@@ -212,16 +214,15 @@ const Login = () => {
         onChangeText={(email) => setEmail(email)}
         keyboardType="email-address"
       />
-      <TextInput
+      <AppTextInput
         style={[styles.email, {borderBottomColor: color4}]}
-        placeholder="Mật khẩu"
+        i18nKey={'password'}
         placeholderTextColor={color4}
         onFocus={() => setColor4(colors.blue)}
         onBlur={() => setColor4('#333')}
         secureTextEntry
         value={password}
         onChangeText={(password) => setPassword(password)}
-        // keyboardType="visible-password"
       />
       <Image
         style={{width: 50, height: 50}}
@@ -258,7 +259,9 @@ const Login = () => {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.LoginButton} onPress={createUser}>
-        <Text style={{color: 'white', fontSize: 17}}>Đăng ký</Text>
+        <Text style={{color: 'white', fontSize: 17}}>
+          <AppText i18nKey={'password'} />
+        </Text>
       </TouchableOpacity>
     </ScrollView>
   );

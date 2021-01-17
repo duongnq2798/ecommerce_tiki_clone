@@ -9,9 +9,10 @@ import img from '../constants/Images';
 
 const Notification = (props) => {
   const [activeTab, setActiveTab] = useState(1);
+  // let text = 'notification';
   return (
     <View style={{flex: 1}}>
-      <HeadPersonal title="Thông Báo" />
+      <HeadPersonal title="notification" />
       <View style={{flex: 1, flexDirection: 'row'}}>
         <View>
           <TabBar setActiveTab={setActiveTab} />
