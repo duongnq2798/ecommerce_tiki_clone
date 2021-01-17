@@ -6,22 +6,60 @@
   "notification": "Notification",
   "personal": "Personal",
 
-  "whatAreYouLokingForToday": "What Are You Looking Fot Today?",
+  "whatAreYouLokingForToday": "What Are You Looking For Today?",
   "priceShock": "Price Shock",
   "today": "Today",
+  "sold": "Sold",
   "discountCode": "Discount Code",
   "loadCard": "Load Card",
   "refund": "Refund",
   "forMember": "For Member",
-  "appointmentDelivery": "Appointment Delivery",
-  "installation": "Installation",
+  "appointmentDeliveryInstallation": "Delivery - Installation",
   "freshFood": "Fresh Food",
   "partnerIncentives": "Partner Incentives",
   "beerAndWine": "Beer & Wine",
   "toDayHaveHot": "To Day Have Hot",
   "huntGiftDaily": "Hunt Gift Daily",
   "seeBuyNow": "View Buy Now",
-  "outstandingSearch": "Outstanding Search"
+  "outstandingSearch": "Outstanding Search",
+  "viewMore": "View More",
+
+  "categoryHot": "Category Hot",
+  "categoryProduct": "Category Product",
+  
+  "explore": "Explore",
+  "newInformation": "New Infomation",
+  "care": "Care",
+  "follow": "Follow",
+  "store": "Shop",
+  "followed": "Followed",
+  "liveEverytime": "Live Every Time",
+  "minuteAgo": "minutes ago",
+
+  
+  "welcome": "Welcome",
+  "toTiki": "to Tiki",
+  "welcomeToTiki": "Welcome to Tiki",
+  "loggout": "Logout",
+  "login": "Login",
+  "signUp": "Register",
+  "manageOrder": "Manage Order",
+  "purchasedProduct": "Purchased Product",
+  "viewedProduct": "Viewed Product",
+  "favorireProduct": "Favorite Product",
+  "ratedProducts": "Rated Products",
+  "productPurchasedLater": "Product Purchased Later",
+  "offersForBankCardHolders": "Offers For Bank Cardholders",
+  "setting": "Setting",
+  "support": "Support",
+
+  "emailOrPhone": "Email / Phone number",
+  "password": "Password",
+  "forgotPassword": "Forgot Password?",
+
+  "fullName": "Full Name",
+  "phoneNumber": "Phone number",
+  "email": "Email"
 }
 
 
